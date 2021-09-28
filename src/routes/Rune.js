@@ -5,7 +5,7 @@ import RuneDisplayer from "../components/RuneDisplayer";
 
 const Rune = ({ match }) => {
   const { rune } = match.params;
-
+  // console.log(Runedatas);
   const rune_rawData = Runedatas.filter(
     (x) => x.engName.toLowerCase() === rune.toLowerCase()
   )[0];
@@ -18,6 +18,7 @@ const Rune = ({ match }) => {
         <RuneSelector rune={rune} />
       </div>
       <div>
+        룬 정보
         <RuneDisplayer rune={rune_rawData} />
       </div>
     </div>
