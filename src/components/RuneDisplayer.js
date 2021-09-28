@@ -6,12 +6,26 @@ import {
   TableContainer,
   TableRow,
   Paper,
+  List,
+  ListItemText,
 } from "@mui/material";
 
 export default function RuneDisplayer(props) {
   const rune = props.rune; // number, engName, korName, specWithWeapon, specWithHelmNChest, reqLvl, reqToUp, note
-  // console.log("rune", rune);
+  console.log("rune", rune);
   const tableRowSx = { "&:last-child td, &:last-child th": { border: 0 } };
+
+  const listText = (lists) => {
+    return (
+      <List>
+        {lists.map((element, i) => (
+          <ListItemText key={i} alignItems="center">
+            {element}
+          </ListItemText>
+        ))}
+      </List>
+    );
+  };
 
   return (
     <div>
@@ -39,7 +53,7 @@ export default function RuneDisplayer(props) {
                 무기 장착시
               </TableCell>
               <TableCell align="center" colSpan={4}>
-                {rune.specWithWeapon}
+                {listText(rune.specWithWeapon)}
               </TableCell>
             </TableRow>
             <TableRow sx={{ tableRowSx }}>
@@ -47,7 +61,7 @@ export default function RuneDisplayer(props) {
                 투구/갑옷 장착시
               </TableCell>
               <TableCell align="center" colSpan={4}>
-                {rune.specWithHelmNChest}
+                {listText(rune.specWithHelmNChest)}
               </TableCell>
             </TableRow>
             <TableRow sx={{ tableRowSx }}>
@@ -55,7 +69,7 @@ export default function RuneDisplayer(props) {
                 방패 장착시
               </TableCell>
               <TableCell align="center" colSpan={4}>
-                {rune.specWithShield}
+                {listText(rune.specWithShield)}
               </TableCell>
             </TableRow>
             {rune.note ? (

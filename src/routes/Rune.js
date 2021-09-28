@@ -21,6 +21,7 @@ const Rune = ({ match }) => {
         룬 정보
         <RuneDisplayer rune={rune_rawData} />
       </div>
+      <div>관련 룬워드</div>
     </div>
   );
 };
