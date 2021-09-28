@@ -1,7 +1,7 @@
-import React from 'react'
-import { Route, Link } from 'react-router-dom';
-import Home from './routes/Home';
-import Rune from './routes/Rune';
+import React from "react";
+import { Route, Link } from "react-router-dom";
+import Home from "./routes/Home";
+import Rune from "./routes/Rune";
 
 const App = () => {
   return (
