@@ -11,6 +11,8 @@ import {
   FormLabel,
   FormControlLabel,
 } from "@mui/material";
+
+import runeDatas from "../datas/runes.json";
 import { Link } from "react-router-dom";
 
 export default function RuneSelector(props) {
@@ -67,6 +69,17 @@ export default function RuneSelector(props) {
   //     }
   // }
 
+  const runeTemplete = (rune) => {
+    // input : Tal
+    // output : [7] 탈 / Tal
+
+    const targetRune = runeDatas.filter(
+      (x) => x.engName.toLowerCase() === rune.toLowerCase()
+    )[0];
+
+    return `[${targetRune.number}] ${targetRune.korName} / ${targetRune.engName}`;
+  };
+
   return (
     <Box sx={{ minWidth: 120 }}>
       <FormControl
@@ -87,8 +100,10 @@ export default function RuneSelector(props) {
         >
           {/* {runeListValues()} */}
           {/* TODO: 리스트를 번호순 또는 알파벳순으로 정렬할수있도록 */}
-          {runeList.map((rune, index) => (
-            <MenuItem value={runeList[index]}>{runeList[index]}</MenuItem>
+          {runeDatas.map((rune, index) => (
+            <MenuItem
+              value={runeDatas[index].engName}
+            >{`[${runeDatas[index].number}] ${runeDatas[index].korName} / ${runeDatas[index].engName}`}</MenuItem>
           ))}
           {/* <MenuItem value={10}>Ten</MenuItem>
                 <MenuItem value={20}>Twenty</MenuItem>
@@ -107,7 +122,7 @@ export default function RuneSelector(props) {
       >
         Go
       </Button>
-      <FormControl component="fieldset">
+      {/* <FormControl component="fieldset">
         <FormLabel component="legend">Sort type</FormLabel>
         <RadioGroup
           row
@@ -123,7 +138,7 @@ export default function RuneSelector(props) {
             label="alphabet"
           />
         </RadioGroup>
-      </FormControl>
+      </FormControl> */}
     </Box>
   );
 }

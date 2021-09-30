@@ -12,7 +12,7 @@ import {
 
 export default function RuneDisplayer(props) {
   const rune = props.rune; // number, engName, korName, specWithWeapon, specWithHelmNChest, reqLvl, reqToUp, note
-  console.log("rune", rune);
+  // console.log("rune", rune);
   const tableRowSx = { "&:last-child td, &:last-child th": { border: 0 } };
 
   const listText = (lists) => {
@@ -34,7 +34,8 @@ export default function RuneDisplayer(props) {
           <TableBody>
             <TableRow sx={{ tableRowSx }}>
               <TableCell align="center" colSpan={1}>
-                {"image"}
+                {/* {"image"} */}
+                {"이름"}
               </TableCell>
               <TableCell align="center" colSpan={4}>
                 {`[${rune.number}] ${rune.korName} / ${rune.engName}`}
