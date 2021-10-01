@@ -100,14 +100,11 @@ export default function RuneSelector(props) {
         >
           {/* {runeListValues()} */}
           {/* TODO: 리스트를 번호순 또는 알파벳순으로 정렬할수있도록 */}
-          {runeDatas.map((rune, index) => (
+          {runeDatas.map((rune) => (
             <MenuItem
-              value={runeDatas[index].engName}
-            >{`[${runeDatas[index].number}] ${runeDatas[index].korName} / ${runeDatas[index].engName}`}</MenuItem>
+              value={rune.engName}
+            >{`[${rune.number}] ${rune.korName} / ${rune.engName}`}</MenuItem>
           ))}
-          {/* <MenuItem value={10}>Ten</MenuItem>
-                <MenuItem value={20}>Twenty</MenuItem>
-                <MenuItem value={30}>Thirty</MenuItem> */}
         </Select>
       </FormControl>
       <Button

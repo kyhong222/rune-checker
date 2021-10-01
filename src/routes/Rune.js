@@ -3,6 +3,7 @@ import { Redirect } from "react-router";
 import RuneSelector from "../components/RuneSelector";
 import RuneDisplayer from "../components/RuneDisplayer";
 import RWDisplayer from "../components/RWDisplayer";
+import RuneOrderDisplayer from "../components/RuneOrderDisplayer";
 
 import Runedatas from "../datas/runes.json";
 import RWChests from "../datas/RWChest.json";
@@ -50,6 +51,10 @@ const Rune = ({ match }) => {
             {/* <p>{rune}의 룬페이지입니당</p> */}
             <div>
               <RuneSelector rune={rune} />
+            </div>
+            <div>
+              {"룬 서열"}
+              <RuneOrderDisplayer rune={rune_rawData} />
             </div>
             <div>
               {"룬 정보"}
@@ -104,6 +109,7 @@ const Rune = ({ match }) => {
         </>
       ) : (
         <>
+          {/* 잘못된 룬이름으로 접근시 리다이렉트 */}
           <Redirect
             to={{
               pathname: "/",

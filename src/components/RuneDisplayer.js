@@ -32,9 +32,7 @@ export default function RuneDisplayer(props) {
     return (
       <List>
         {lists.map((element, i) => (
-          <ListItemText key={i} alignItems="center">
-            {element}
-          </ListItemText>
+          <ListItemText key={i}>{element}</ListItemText>
         ))}
       </List>
     );
