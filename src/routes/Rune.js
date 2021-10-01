@@ -52,16 +52,16 @@ const Rune = ({ match }) => {
               <RuneSelector rune={rune} />
             </div>
             <div>
-              룬 정보
+              {"룬 정보"}
               <RuneDisplayer rune={rune_rawData} />
             </div>
             <div>
-              관련 룬워드
+              {"관련 룬워드"}
               <div>
                 <div>
                   {relatedRWHelm().length ? (
                     <>
-                      투구
+                      {"투구"}
                       <RWDisplayer RWList={relatedRWHelm()} />
                     </>
                   ) : (
@@ -71,7 +71,7 @@ const Rune = ({ match }) => {
                 <div>
                   {relatedRWWeapon().length ? (
                     <>
-                      무기
+                      {"무기"}
                       <RWDisplayer RWList={relatedRWWeapon()} />
                     </>
                   ) : (
@@ -81,7 +81,7 @@ const Rune = ({ match }) => {
                 <div>
                   {relatedRWWeapon().length ? (
                     <>
-                      갑옷
+                      {"갑옷"}
                       <RWDisplayer RWList={relatedRWChest()} />
                     </>
                   ) : (
@@ -91,7 +91,7 @@ const Rune = ({ match }) => {
                 <div>
                   {relatedRWShield().length ? (
                     <>
-                      방패
+                      {"방패"}
                       <RWDisplayer RWList={relatedRWShield()} />
                     </>
                   ) : (
