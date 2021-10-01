@@ -128,27 +128,6 @@ export default function RWDisplayer(props) {
                 </TableRow>
               </>
             )}
-
-            {/* <TableRow>
-              <TableCell sx={{ border: 0 }}>
-                {RW.remakeName === RW.legacyName ? (
-                  <TableCell sx={RWNameSx}>{`${RW.remakeName}`}</TableCell>
-                ) : (
-                  <>
-                    <TableRow>
-                      <TableCell
-                        sx={RWNameJoinSx}
-                      >{`${RW.remakeName}`}</TableCell>
-                    </TableRow>
-                    <TableRow sx={{ border: 0 }}>
-                      <TableCell
-                        sx={RWNameJoinSx}
-                      >{`${RW.legacyName}`}</TableCell>
-                    </TableRow>
-                  </>
-                )}
-              </TableCell>
-            </TableRow> */}
             <TableRow>
               <TableCell sx={RWNameSx}>{RW.engName}</TableCell>
             </TableRow>

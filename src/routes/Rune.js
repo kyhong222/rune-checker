@@ -1,4 +1,5 @@
 import React from "react";
+import { Redirect } from "react-router";
 import RuneSelector from "../components/RuneSelector";
 import RuneDisplayer from "../components/RuneDisplayer";
 import RWDisplayer from "../components/RWDisplayer";
@@ -42,61 +43,75 @@ const Rune = ({ match }) => {
   // console.log("rune_rawData", rune_rawData)
   // console.log("related", relatedRWChest());
   return (
-    <div>
-      {/* <p>{rune}의 룬페이지입니당</p> */}
-      <div>
-        <RuneSelector rune={rune} />
-      </div>
-      <div>
-        룬 정보
-        <RuneDisplayer rune={rune_rawData} />
-      </div>
-      <div>
-        관련 룬워드
-        <div>
+    <>
+      {rune_rawData ? (
+        <>
           <div>
-            {relatedRWHelm().length ? (
-              <>
-                투구
-                <RWDisplayer RWList={relatedRWHelm()} />
-              </>
-            ) : (
-              <></>
-            )}
+            {/* <p>{rune}의 룬페이지입니당</p> */}
+            <div>
+              <RuneSelector rune={rune} />
+            </div>
+            <div>
+              룬 정보
+              <RuneDisplayer rune={rune_rawData} />
+            </div>
+            <div>
+              관련 룬워드
+              <div>
+                <div>
+                  {relatedRWHelm().length ? (
+                    <>
+                      투구
+                      <RWDisplayer RWList={relatedRWHelm()} />
+                    </>
+                  ) : (
+                    <></>
+                  )}
+                </div>
+                <div>
+                  {relatedRWWeapon().length ? (
+                    <>
+                      무기
+                      <RWDisplayer RWList={relatedRWWeapon()} />
+                    </>
+                  ) : (
+                    <></>
+                  )}
+                </div>
+                <div>
+                  {relatedRWWeapon().length ? (
+                    <>
+                      갑옷
+                      <RWDisplayer RWList={relatedRWChest()} />
+                    </>
+                  ) : (
+                    <></>
+                  )}
+                </div>
+                <div>
+                  {relatedRWShield().length ? (
+                    <>
+                      방패
+                      <RWDisplayer RWList={relatedRWShield()} />
+                    </>
+                  ) : (
+                    <></>
+                  )}
+                </div>
+              </div>
+            </div>
           </div>
-          <div>
-            {relatedRWWeapon().length ? (
-              <>
-                무기
-                <RWDisplayer RWList={relatedRWWeapon()} />
-              </>
-            ) : (
-              <></>
-            )}
-          </div>
-          <div>
-            {relatedRWWeapon().length ? (
-              <>
-                갑옷
-                <RWDisplayer RWList={relatedRWChest()} />
-              </>
-            ) : (
-              <></>
-            )}
-          </div>
-          <div>
-            {relatedRWShield().length ? (
-              <>
-                방패
-                <RWDisplayer RWList={relatedRWShield()} />
-              </>
-            ) : (
-              <></>
-            )}
-          </div>
-        </div>
-      </div>
-    </div>
+        </>
+      ) : (
+        <>
+          <Redirect
+            to={{
+              pathname: "/",
+            }}
+          />
+        </>
+      )}
+    </>
   );
 };
 
