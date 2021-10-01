@@ -8,6 +8,7 @@ import {
   List,
   ListItemText,
   Paper,
+  TableHead,
 } from "@mui/material";
 
 import runeDatas from "../datas/runes.json";
@@ -19,6 +20,52 @@ export default function RWDisplayer(props) {
   const RWList = props.RWList;
 
   const tableRowSx = { "&:last-child td, &:last-child th": { border: 0 } };
+  const RWNameJoinSx = {
+    minWidth: 150,
+    border: 0,
+    px: 1,
+    py: 0,
+    m: 1,
+    textAlign: "center",
+  };
+  const RWNameSx = {
+    minWidth: 150,
+    border: 0,
+    p: 1,
+    m: 1,
+    textAlign: "center",
+  };
+  const reqRuneSx = {
+    minWidth: 200,
+    border: 0,
+    p: 1,
+    m: 1,
+    textAlign: "center",
+  };
+  const reqLvlColSx = {
+    borderRight: "1px solid rgba(224,224,224,1)",
+    textAlign: "center",
+    width: 50,
+  };
+  const RWNameColSx = {
+    borderRight: "1px solid rgba(224,224,224,1)",
+    textAlign: "center",
+    width: 150,
+  };
+  const reqRuneColSx = {
+    borderRight: "1px solid rgba(224,224,224,1)",
+    textAlign: "center",
+    width: 200,
+  };
+  const baseColSx = {
+    borderRight: "1px solid rgba(224,224,224,1)",
+    textAlign: "center",
+    width: 60,
+  };
+  const specColSx = {
+    borderRight: "1px solid rgba(224,224,224,1)",
+    textAlign: "center",
+  };
 
   const listText = (lists) => {
     return (
@@ -32,12 +79,29 @@ export default function RWDisplayer(props) {
     );
   };
 
-  const runeNumberToName = (number) => {
+  const runeNumberToKorName = (number) => {
     return runeDatas[number - 1].korName;
+  };
+
+  const runeNumberToEngName = (number) => {
+    return runeDatas[number - 1].engName;
   };
 
   const RWSpec = (spec) => {
     return listText(spec.split("\n"));
+  };
+  const RWHead = () => {
+    return (
+      <TableHead sx={{ backgroundColor: "rgba(224,224,224,0.5)" }}>
+        <TableRow>
+          <TableCell sx={reqLvlColSx}>{"레벨제한"}</TableCell>
+          <TableCell sx={RWNameColSx}>{"이름"}</TableCell>
+          <TableCell sx={reqRuneColSx}>{"룬"} 재료</TableCell>
+          <TableCell sx={baseColSx}>{"베이스"}</TableCell>
+          <TableCell sx={specColSx}>{"옵션"}</TableCell>
+        </TableRow>
+      </TableHead>
+    );
   };
   const RWTemplete = (RW) => {
     // RW = 룬워드 객체
@@ -46,17 +110,67 @@ export default function RWDisplayer(props) {
     return (
       <TableBody>
         <TableRow sx={{ tableRowSx }}>
-          <TableCell align="center">{RW.reqLvl}</TableCell>
-          <TableCell align="center">
-            {RW.remakeName === RW.legacyName
-              ? `${RW.remakeName}`
-              : `${RW.remakeName} / ${RW.legacyName}`}
+          <TableCell sx={reqLvlColSx}>{RW.reqLvl}</TableCell>
+          <TableCell sx={RWNameColSx}>
+            {RW.remakeName === RW.legacyName ? (
+              <>
+                <TableRow>
+                  <TableCell sx={RWNameSx}>{`${RW.remakeName}`}</TableCell>
+                </TableRow>
+              </>
+            ) : (
+              <>
+                <TableRow>
+                  <TableCell sx={RWNameJoinSx}>{`${RW.remakeName}`}</TableCell>
+                </TableRow>
+                <TableRow sx={{ border: 0 }}>
+                  <TableCell sx={RWNameJoinSx}>{`${RW.legacyName}`}</TableCell>
+                </TableRow>
+              </>
+            )}
+
+            {/* <TableRow>
+              <TableCell sx={{ border: 0 }}>
+                {RW.remakeName === RW.legacyName ? (
+                  <TableCell sx={RWNameSx}>{`${RW.remakeName}`}</TableCell>
+                ) : (
+                  <>
+                    <TableRow>
+                      <TableCell
+                        sx={RWNameJoinSx}
+                      >{`${RW.remakeName}`}</TableCell>
+                    </TableRow>
+                    <TableRow sx={{ border: 0 }}>
+                      <TableCell
+                        sx={RWNameJoinSx}
+                      >{`${RW.legacyName}`}</TableCell>
+                    </TableRow>
+                  </>
+                )}
+              </TableCell>
+            </TableRow> */}
+            <TableRow>
+              <TableCell sx={RWNameSx}>{RW.engName}</TableCell>
+            </TableRow>
           </TableCell>
-          <TableCell align="center">
-            {RW.reqRunes.split(" ").map((x) => `${runeNumberToName(x)} `)}
+          <TableCell sx={reqRuneColSx}>
+            <TableRow>
+              <TableCell sx={reqRuneSx}>
+                {RW.reqRunes
+                  .split(" ")
+                  .map((x) => `${runeNumberToKorName(x)} `)}
+              </TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell sx={reqRuneSx}>
+                {RW.reqRunes
+                  .split(" ")
+                  .map((x) => `${runeNumberToEngName(x)} `)}
+              </TableCell>
+            </TableRow>
           </TableCell>
-          <TableCell align="center">{RW.base}</TableCell>
-          <TableCell align="center">{RWSpec(RW.spec)}</TableCell>
+          <TableCell sx={baseColSx}>{RW.base}</TableCell>
+          <TableCell sx={specColSx}>{RWSpec(RW.spec)}</TableCell>
         </TableRow>
       </TableBody>
     );
@@ -66,6 +180,7 @@ export default function RWDisplayer(props) {
     <div>
       <TableContainer component={Paper}>
         <Table sx={{ minWidth: 200 }} aria-label="RW display table">
+          {RWHead()}
           {RWList.map((x) => RWTemplete(x))}
           {/* {RWList.map((x) => x.engName)} */}
         </Table>
