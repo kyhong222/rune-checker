@@ -1,5 +1,8 @@
 import React from "react";
 import { Redirect } from "react-router";
+
+import { TextField } from "@mui/material";
+
 import RuneSelector from "../components/RuneSelector";
 import RuneDisplayer from "../components/RuneDisplayer";
 import RWDisplayer from "../components/RWDisplayer";
@@ -15,7 +18,7 @@ const Rune = ({ match }) => {
   const { rune } = match.params;
   // console.log(Runedatas);
 
-  const styles = {};
+  // const styles = {};
 
   const rune_rawData = Runedatas.filter(
     (x) => x.engName.toLowerCase() === rune.toLowerCase()
@@ -41,8 +44,7 @@ const Rune = ({ match }) => {
       RW.reqRunes.split(" ").includes(rune_rawData.number.toString())
     ).sort((a, b) => a.reqLvl > b.reqLvl);
   };
-  // console.log("rune_rawData", rune_rawData)
-  // console.log("related", relatedRWChest());
+
   return (
     <>
       {rune_rawData ? (
