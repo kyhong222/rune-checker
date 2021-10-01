@@ -81,45 +81,55 @@ export default function RuneSelector(props) {
   };
 
   return (
-    <Box sx={{ minWidth: 120 }}>
-      <FormControl
-        sx={{
-          minWidth: "90%",
-        }}
-      >
-        <InputLabel id="rune-selector-label">Rune</InputLabel>
-        <Select
-          labelId="rune-selector-label"
-          id="rune-selector"
-          value={rune}
-          label="Rune"
-          onChange={handleChange}
+    <div style={{ width: "100%" }}>
+      <Box sx={{ display: "flex", p: 1 }}>
+        <FormControl
           sx={{
-            height: "90%",
+            p: 1,
+            width: "100%",
+            height: 50,
           }}
         >
-          {/* {runeListValues()} */}
-          {/* TODO: 리스트를 번호순 또는 알파벳순으로 정렬할수있도록 */}
-          {runeDatas.map((rune) => (
-            <MenuItem
-              value={rune.engName}
-            >{`[${rune.number}] ${rune.korName} / ${rune.engName}`}</MenuItem>
-          ))}
-        </Select>
-      </FormControl>
-      <Button
-        component={Link}
-        to={`/runes/${rune}`}
-        variant="contained"
-        sx={{
-          minWidth: "4%",
-          ml: "10px",
-          height: 55,
-        }}
-      >
-        Go
-      </Button>
-      {/* <FormControl component="fieldset">
+          <InputLabel id="rune-selector-label">Rune</InputLabel>
+          <Select
+            labelId="rune-selector-label"
+            id="rune-selector"
+            value={rune}
+            label="Rune"
+            onChange={handleChange}
+            sx={{
+              height: 50,
+              p: 1,
+              // minWidth: 50,
+              width: "100%",
+              // maxWidth: "90%",
+            }}
+          >
+            {/* {runeListValues()} */}
+            {/* TODO: 리스트를 번호순 또는 알파벳순으로 정렬할수있도록 */}
+            {runeDatas.map((rune) => (
+              <MenuItem
+                value={rune.engName}
+              >{`[${rune.number}] ${rune.korName} / ${rune.engName}`}</MenuItem>
+            ))}
+          </Select>
+        </FormControl>
+        <Button
+          component={Link}
+          to={`/runes/${rune}`}
+          variant="contained"
+          sx={{
+            minWidth: "50",
+            mt: "7px",
+            ml: "10px",
+            height: 50,
+            p: 1,
+            flexShrink: 0,
+          }}
+        >
+          {"Go"}
+        </Button>
+        {/* <FormControl component="fieldset">
         <FormLabel component="legend">Sort type</FormLabel>
         <RadioGroup
           row
@@ -136,6 +146,7 @@ export default function RuneSelector(props) {
           />
         </RadioGroup>
       </FormControl> */}
-    </Box>
+      </Box>
+    </div>
   );
 }

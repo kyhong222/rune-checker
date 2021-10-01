@@ -18,6 +18,7 @@ export default function RuneOrderDisplayer(props) {
     borderRight: "1px solid rgba(224,224,224,1)",
     // border: 0,
     textAlign: "center",
+    backgroundColor: "rgba(224,224,224,0.3)",
     // width: 50,
   };
   const runeUpSx = {
@@ -42,7 +43,7 @@ export default function RuneOrderDisplayer(props) {
     my: 0,
     py: 0,
     px: 0,
-    width: 80,
+    width: 90,
     height: 30,
     textAlign: "center",
   };
@@ -71,12 +72,10 @@ export default function RuneOrderDisplayer(props) {
           <TableCell sx={runeUpElementSx}>{"→"}</TableCell>
         </TableRow>
         <TableRow>
-          <TableCell sx={runeUpElementSx}>{`X${reqQuantity(
-            preRune
-          )}`}</TableCell>
+          <TableCell sx={runeUpElementSx}>{`X${reqQuantity(rune)}`}</TableCell>
         </TableRow>
         <TableRow>
-          <TableCell sx={runeUpElementSx}>{preRune.reqToUp}</TableCell>
+          <TableCell sx={runeUpElementSx}>{rune.reqToUp}</TableCell>
         </TableRow>
       </TableCell>
     );

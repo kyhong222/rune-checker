@@ -84,7 +84,7 @@ const Rune = ({ match }) => {
                   )}
                 </div>
                 <div>
-                  {relatedRWWeapon().length ? (
+                  {relatedRWChest().length ? (
                     <>
                       {"갑옷"}
                       <RWDisplayer RWList={relatedRWChest()} />
