@@ -1,5 +1,5 @@
 import * as React from "react";
-import { TableCell, TableBody, TableHead, TableRow } from "@mui/material";
+import { TableCell, TableBody, TableRow } from "@mui/material";
 
 import runeDatas from "../datas/runes.json";
 
