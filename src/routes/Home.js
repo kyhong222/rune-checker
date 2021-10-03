@@ -1,5 +1,6 @@
 import React from "react";
 import RuneSelector from "../components/RuneSelector";
+import PatchNote from "../components/PatchNote";
 
 const Home = () => {
   return (
@@ -8,6 +9,9 @@ const Home = () => {
       <div>
         <RuneSelector />
       </div>
+      {/* <div>
+        <PatchNote />
+      </div> */}
     </div>
   );
 };

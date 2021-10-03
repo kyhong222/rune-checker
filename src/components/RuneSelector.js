@@ -16,7 +16,7 @@ import runeDatas from "../datas/runes.json";
 import { Link } from "react-router-dom";
 
 export default function RuneSelector(props) {
-  const [rune, setRune] = React.useState(props.rune ? props.rune : "El");
+  const [rune, setRune] = React.useState(props.rune ? props.rune : "");
   const [selected, setSelected] = React.useState("number");
 
   const handleChange = (event) => {
@@ -85,12 +85,12 @@ export default function RuneSelector(props) {
       <Box sx={{ display: "flex", p: 1 }}>
         <FormControl
           sx={{
-            p: 1,
+            // p: 1,
             width: "100%",
             height: 50,
           }}
         >
-          <InputLabel id="rune-selector-label">Rune</InputLabel>
+          <InputLabel id="rune-selector-label">{"Rune"}</InputLabel>
           <Select
             labelId="rune-selector-label"
             id="rune-selector"
@@ -120,7 +120,7 @@ export default function RuneSelector(props) {
           variant="contained"
           sx={{
             minWidth: "50",
-            mt: "7px",
+            // mt: "7px",
             ml: "10px",
             height: 50,
             p: 1,
