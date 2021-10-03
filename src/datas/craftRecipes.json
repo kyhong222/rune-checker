@@ -1,0 +1,218 @@
+[
+  {
+    "craftingType": "hitPower",
+    "reqRune": 6,
+    "bases": "매직 풀 헬름 / 바시넷 / 자이언트 콘치",
+    "options": "+25~50 방어력(원거리)"
+  },
+  {
+    "craftingType": "hitPower",
+    "reqRune": 8,
+    "bases": "매직 체인 부츠 / 메시 부츠 / 본위브 부츠",
+    "options": "+25~50 방어력(근접)"
+  },
+  {
+    "craftingType": "hitPower",
+    "reqRune": 9,
+    "bases": "매직 체인 글러브 / 헤비 브레이서 / 뱀브레이스",
+    "options": "적을 밀침"
+  },
+  {
+    "craftingType": "hitPower",
+    "reqRune": 7,
+    "bases": "매직 헤비 벨트 / 배틀 벨트 / 트롤 벨트",
+    "options": "입은 피해의 5~10%만큼 마나 회복"
+  },
+  {
+    "craftingType": "hitPower",
+    "reqRune": 6,
+    "bases": "매직 고딕 실드 / 에인션트 실드 / 와드",
+    "options": "5~10% 방패 막기 확률 증가"
+  },
+  {
+    "craftingType": "hitPower",
+    "reqRune": 4,
+    "bases": "매직 필드 플레이트 / 샤크투스 아머 / 크라켄 쉘",
+    "options": "10~20% 빠른 회복"
+  },
+  {
+    "craftingType": "hitPower",
+    "reqRune": 10,
+    "bases": "매직 목걸이",
+    "options": "적이 달아남 3~11%"
+  },
+  {
+    "craftingType": "hitPower",
+    "reqRune": 11,
+    "bases": "매직 링",
+    "options": "+1~5 민첩성"
+  },
+  {
+    "craftingType": "hitPower",
+    "reqRune": 3,
+    "bases": "매직 둔기류",
+    "options": "+35~60% 증가한 대미지"
+  },
+  {
+    "craftingType": "blood",
+    "reqRune": 8,
+    "bases": "매직 헬름 / 캐스크 / 아멧",
+    "options": "5~10% 치명타"
+  },
+  {
+    "craftingType": "blood",
+    "reqRune": 5,
+    "bases": "매직 라이트 플레이트 부츠 / 배틀 부츠 / 미러드 부츠",
+    "options": "라이프 재생 +5~10"
+  },
+  {
+    "craftingType": "blood",
+    "reqRune": 4,
+    "bases": "매직 헤비 글러브 / 샤크스킨 글러브 / 뱀파이어본 글러브",
+    "options": "강한 타격 5~10%"
+  },
+  {
+    "craftingType": "blood",
+    "reqRune": 7,
+    "bases": "매직 벨트 / 메시 벨트 / 미스릴 코일",
+    "options": "상처 악화 5~10%"
+  },
+  {
+    "craftingType": "blood",
+    "reqRune": 6,
+    "bases": "매직 스파이크 실드 / 바브드 실드 / 블레이드 배리어",
+    "options": "공격한 적이 4~7의 피해를 받음"
+  },
+  {
+    "craftingType": "blood",
+    "reqRune": 10,
+    "bases": "매직 플레이트 메일 / 템플러 코트 / 헬포지 플레이트",
+    "options": "+1~3 라이프 회복(데몬 처치 시)"
+  },
+  {
+    "craftingType": "blood",
+    "reqRune": 11,
+    "bases": "매직 목걸이",
+    "options": "5~10% 이동 속도 증가"
+  },
+  {
+    "craftingType": "blood",
+    "reqRune": 12,
+    "bases": "매직 링",
+    "options": "+1~5 힘"
+  },
+  {
+    "craftingType": "blood",
+    "reqRune": 9,
+    "bases": "매직 도끼류",
+    "options": "+30~60% 증가한 대미지"
+  },
+  {
+    "craftingType": "caster",
+    "reqRune": 4,
+    "bases": "매직 마스크 / 데스 마스크 / 데몬헤드 마스크",
+    "options": "1~4% 마나 흡수"
+  },
+  {
+    "craftingType": "caster",
+    "reqRune": 10,
+    "bases": "매직 부츠 / 데몬하이드 부츠 / 웜하이드 부츠",
+    "options": "최대 마나 증가 2~5%"
+  },
+  {
+    "craftingType": "caster",
+    "reqRune": 9,
+    "bases": "매직 레더 글러브 / 데몬하이드 글러브 / 브램블 미트",
+    "options": "+1~3 처치 시 마나 회복"
+  },
+  {
+    "craftingType": "caster",
+    "reqRune": 6,
+    "bases": "매직 라이트 벨트 / 샤크스킨 벨트 / 뱀파이어팽 벨트",
+    "options": "5~10% 빠른 시전 속도"
+  },
+  {
+    "craftingType": "caster",
+    "reqRune": 5,
+    "bases": "매직 스몰 실드 / 라운드 실드 / 루나",
+    "options": "+5~10% 방패 막기 확률 증가"
+  },
+  {
+    "craftingType": "caster",
+    "reqRune": 7,
+    "bases": "매직 라이트 플레이트 / 메이지 플레이트 / 아콘 플레이트",
+    "options": "+1~3 처치 시 마나 회복"
+  },
+  {
+    "craftingType": "caster",
+    "reqRune": 8,
+    "bases": "매직 목걸이",
+    "options": "5~10% 빠른 시전 속도"
+  },
+  {
+    "craftingType": "caster",
+    "reqRune": 11,
+    "bases": "매직 링",
+    "options": "+1~5 에너지"
+  },
+  {
+    "craftingType": "caster",
+    "reqRune": 3,
+    "bases": "매직 봉류",
+    "options": "최대 마나 증가 1~5%"
+  },
+  {
+    "craftingType": "safety",
+    "reqRune": 6,
+    "bases": "매직 크라운 / 그랜드 크라운 / 코로나",
+    "options": "+10~30% 방어력 증가\n라이트닝 저항 +5~10%"
+  },
+  {
+    "craftingType": "safety",
+    "reqRune": 9,
+    "bases": "매직 그리브즈 / 워 부츠 / 뮈르미돈 부츠",
+    "options": "+10~30% 방어력 증가\n파이어 저항 +5~10%"
+  },
+  {
+    "craftingType": "safety",
+    "reqRune": 8,
+    "bases": "매직 건틀릿 / 워 건틀릿 / 오우거 건틀릿",
+    "options": "+10~30% 방어력 증가\n콜드 저항 +5~10%"
+  },
+  {
+    "craftingType": "safety",
+    "reqRune": 7,
+    "bases": "매직 새시 / 데몬하이드 새시 / 스파이더웹 새시",
+    "options": "+10~30% 방어력 증가\n포이즌 저항 +5~10%"
+  },
+  {
+    "craftingType": "safety",
+    "reqRune": 4,
+    "bases": "매직 카이트 실드 / 드래곤 실드 / 모나크",
+    "options": "+10~30% 방어력 증가\n매직 저항 +5~10%"
+  },
+  {
+    "craftingType": "safety",
+    "reqRune": 5,
+    "bases": "매직 브레스트 플레이트 / 퀴라스 / 그레이트 호버크",
+    "options": "+10~30% 방어력 증가\n빙결 시간 절반으로 감소"
+  },
+  {
+    "craftingType": "safety",
+    "reqRune": 10,
+    "bases": "매직 목걸이",
+    "options": "+1~10% 방패 막기 확률 증가"
+  },
+  {
+    "craftingType": "safety",
+    "reqRune": 11,
+    "bases": "매직 링",
+    "options": "+1~5 생명력"
+  },
+  {
+    "craftingType": "safety",
+    "reqRune": 12,
+    "bases": "매직 창 / 투창류",
+    "options": "+5~10% 방어력 증가"
+  }
+]

@@ -7,6 +7,7 @@ import RuneSelector from "../components/RuneSelector";
 import RuneDisplayer from "../components/RuneDisplayer";
 import RWDisplayer from "../components/RWDisplayer";
 import RuneOrderDisplayer from "../components/RuneOrderDisplayer";
+import RelatedRecipeDisplayer from "../components/RelatedRecipeDisplayer";
 
 import Runedatas from "../datas/runes.json";
 import RWChests from "../datas/RWChest.json";
@@ -61,6 +62,10 @@ const Rune = ({ match }) => {
             <div>
               {"룬 정보"}
               <RuneDisplayer rune={rune_rawData} />
+            </div>
+            <div>
+              {"관련 조합법"}
+              <RelatedRecipeDisplayer rune={rune_rawData} />
             </div>
             <div>
               {"관련 룬워드"}

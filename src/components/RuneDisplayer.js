@@ -19,8 +19,9 @@ export default function RuneDisplayer(props) {
 
   const tableHeadSx = {
     textAlign: "center",
-    minWidth: 100,
-    width: "20%",
+    width: 100,
+
+    backgroundColor: "rgba(224,224,224,0.5)",
     borderRight: "1px solid rgba(224,224,224,1)",
   };
   const tableBodySx = {
