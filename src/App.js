@@ -2,6 +2,7 @@ import React from "react";
 import { Route, Link } from "react-router-dom";
 import Home from "./routes/Home";
 import Rune from "./routes/Rune";
+import Footer from "./components/Footer";
 
 const App = () => {
   return (
@@ -13,6 +14,9 @@ const App = () => {
       <div>
         <Route exact path="/" component={Home} />
         <Route path="/runes/:rune" component={Rune} />
+      </div>
+      <div>
+        <Footer />
       </div>
     </>
   );

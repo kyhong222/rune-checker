@@ -1,8 +1,6 @@
 import React from "react";
 import { Redirect } from "react-router";
 
-import { TextField } from "@mui/material";
-
 import RuneSelector from "../components/RuneSelector";
 import RuneDisplayer from "../components/RuneDisplayer";
 import RWDisplayer from "../components/RWDisplayer";
@@ -15,11 +13,29 @@ import RWHelms from "../datas/RWHelm.json";
 import RWWeapons from "../datas/RWWeapon.json";
 import RWShields from "../datas/RWShield.json";
 
+import { Container, Divider } from "@mui/material";
+
 const Rune = ({ match }) => {
   const { rune } = match.params;
   // console.log(Runedatas);
 
   // const styles = {};
+
+  const containerTextSx = {
+    component: "div",
+    display: "flex",
+    // border: 1.2,
+    // borderBottom: 1.2,
+    // borderColor: "rgba(0,0,0,0.2)",
+    // borderColor: "secondary",
+    // borderRadius: 1,
+    p: 1,
+    fontSize: 20,
+    mt: 3,
+    // m: 1,
+    // mx: "7px",
+    minWidth: "100%",
+  };
 
   const rune_rawData = Runedatas.filter(
     (x) => x.engName.toLowerCase() === rune.toLowerCase()
@@ -46,6 +62,17 @@ const Rune = ({ match }) => {
     ).sort((a, b) => a.reqLvl > b.reqLvl);
   };
 
+  const containerText = (text) => {
+    return (
+      <div>
+        <Container component="div" sx={containerTextSx}>
+          {text}
+        </Container>
+        <Divider sx={{ mb: 3 }} />
+      </div>
+    );
+  };
+
   return (
     <>
       {rune_rawData ? (
@@ -56,24 +83,24 @@ const Rune = ({ match }) => {
               <RuneSelector rune={rune} />
             </div>
             <div>
-              {"룬 서열"}
+              {containerText("룬 서열")}
               <RuneOrderDisplayer rune={rune_rawData} />
             </div>
             <div>
-              {"룬 정보"}
+              {containerText("룬 정보")}
               <RuneDisplayer rune={rune_rawData} />
             </div>
             <div>
-              {"관련 조합법"}
+              {containerText("관련 조합법")}
               <RelatedRecipeDisplayer rune={rune_rawData} />
             </div>
             <div>
-              {"관련 룬워드"}
+              {containerText("관련 룬워드")}
               <div>
                 <div>
                   {relatedRWHelm().length ? (
                     <>
-                      {"투구"}
+                      {containerText("투구")}
                       <RWDisplayer RWList={relatedRWHelm()} />
                     </>
                   ) : (
@@ -83,7 +110,7 @@ const Rune = ({ match }) => {
                 <div>
                   {relatedRWWeapon().length ? (
                     <>
-                      {"무기"}
+                      {containerText("무기")}
                       <RWDisplayer RWList={relatedRWWeapon()} />
                     </>
                   ) : (
@@ -93,7 +120,7 @@ const Rune = ({ match }) => {
                 <div>
                   {relatedRWChest().length ? (
                     <>
-                      {"갑옷"}
+                      {containerText("갑옷")}
                       <RWDisplayer RWList={relatedRWChest()} />
                     </>
                   ) : (
@@ -103,7 +130,7 @@ const Rune = ({ match }) => {
                 <div>
                   {relatedRWShield().length ? (
                     <>
-                      {"방패"}
+                      {containerText("방패")}
                       <RWDisplayer RWList={relatedRWShield()} />
                     </>
                   ) : (

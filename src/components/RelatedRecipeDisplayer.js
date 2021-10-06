@@ -1,6 +1,8 @@
 import * as React from "react";
 
 import {
+  Container,
+  Divider,
   Table,
   TableRow,
   TableHead,
@@ -189,6 +191,17 @@ export default function RelatedRecipeDisplayer(props) {
     return string;
   };
 
+  const containerText = (text) => {
+    return (
+      <div>
+        <Container component="div" sx={containerTextSx}>
+          {text}
+        </Container>
+        <Divider sx={{ mb: 3 }} />
+      </div>
+    );
+  };
+
   const listText = (lists) => {
     const fixed = lists.split("\n");
     return (
@@ -200,6 +213,22 @@ export default function RelatedRecipeDisplayer(props) {
         ))}
       </List>
     );
+  };
+
+  const containerTextSx = {
+    component: "div",
+    display: "flex",
+    // border: 1.2,
+    // borderBottom: 1.2,
+    // borderColor: "rgba(0,0,0,0.2)",
+    // borderColor: "secondary",
+    // borderRadius: 1,
+    p: 1,
+    fontSize: 20,
+    mt: 3,
+    // m: 1,
+    // mx: "7px",
+    minWidth: "100%",
   };
 
   const cubingHeaderSx = {
@@ -243,7 +272,7 @@ export default function RelatedRecipeDisplayer(props) {
       {/* {`${rune.korName}의 조합법`} */}
       {/* <div>{`${rune.korName} 관련 큐빙`}</div> */}
       {cubingTable()}
-      <div>{`관련 크래프팅`}</div>
+      <div>{containerText(`관련 크래프팅`)}</div>
       {craftTable()}
     </div>
   );
