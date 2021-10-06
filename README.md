@@ -9,7 +9,7 @@
 
 # hosting
 
-This application is hosting on https://d2rw.kro.kr/
+- This application is hosting on https://d2rw.kro.kr/
 
 # Tech stack and licence
 
