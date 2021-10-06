@@ -20,4 +20,4 @@
 - Https certification powered by letsEncrypt(https://letsencrypt.org/ko/)
 - Hosting on AWS EC2 instance(https://aws.amazon.com/ko/)
 - Launching by nginx(https://www.nginx.com/)
-- Domain powered by 내도메인.한국(https://xn--220b31d95hq8o.xn--3e0b707e/)
+- Domain powered by 내도메인.한국(https://내도메인.한국/)
