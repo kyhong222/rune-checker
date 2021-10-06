@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Box, Container, Grid } from "@mui/material";
+import { Box, Container, Grid, Link } from "@mui/material";
 
 export default function Footer(props) {
   const boxSx = {
@@ -14,9 +14,10 @@ export default function Footer(props) {
     bottom: 0,
     // py: 1.5,
     backgroundColor: "rgba(224,224,224,0.8)",
+
     // pb: "100px",
   };
-  const typographySx = { mx: 5, py: 0 };
+  // const typographySx = { mx: 5, py: 0 };
   const contents = {
     Contact: "kyhong222@naver.com",
     Github: "https://github.com/kyhong222/rune-checker",
@@ -38,10 +39,14 @@ export default function Footer(props) {
           {contents.Contact}
         </Grid>
         <Grid item xs={4}>
-          {contents.Github}
+          <Link color="inherit" href={contents.Github}>
+            {contents.Github}
+          </Link>
         </Grid>
         <Grid item xs={4}>
-          {contents["UI Resources"]}
+          <Link color="inherit" href="https://mui.com/">
+            {contents["UI Resources"]}
+          </Link>
         </Grid>
       </Grid>
     );
