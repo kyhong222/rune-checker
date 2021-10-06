@@ -11,6 +11,7 @@ export default function Footer(props) {
     display: "flex",
     position: "sticky",
     width: "100%",
+    height: 80,
     bottom: 0,
     // py: 1.5,
     backgroundColor: "rgba(224,224,224,0.8)",
